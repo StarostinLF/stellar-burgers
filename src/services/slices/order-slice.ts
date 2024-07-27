@@ -26,10 +26,7 @@ export const fetchOrderByNumber = createAsyncThunk(
   async (number: number) => await getOrderByNumberApi(number)
 );
 
-export const fetchOrders = createAsyncThunk(
-  'orders/fetchOrders',
-  async () => await getOrdersApi()
-);
+export const fetchOrders = createAsyncThunk('orders/fetchOrders', getOrdersApi);
 
 export const ordersSlice = createSlice({
   name: 'orders',
@@ -41,9 +38,9 @@ export const ordersSlice = createSlice({
     clearOrderModalDataAction: () => initialState
   },
   selectors: {
-    ordersSelector: (state: TOrdersState) => state.orders,
-    orderSelector: (state: TOrdersState) => state.order,
-    orderRequestSelector: (state: TOrdersState) => state.isLoading
+    ordersSelector: (state) => state.orders,
+    orderSelector: (state) => state.order,
+    orderRequestSelector: (state) => state.isLoading
   },
   extraReducers: (builder) => {
     builder

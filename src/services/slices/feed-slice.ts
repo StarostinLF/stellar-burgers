@@ -15,19 +15,16 @@ const initialState: TFeedState = {
   error: undefined
 };
 
-export const fetchFeed = createAsyncThunk(
-  'feeds/fetchFeed',
-  async () => await getFeedsApi()
-);
+export const fetchFeed = createAsyncThunk('feeds/fetchFeed', getFeedsApi);
 
 export const feedSlice = createSlice({
   name: 'feed',
   initialState,
   reducers: {},
   selectors: {
-    ordersSelector: (state: TFeedState) => state.orders,
-    totalSelector: (state: TFeedState) => state.total,
-    totalTodaySelector: (state: TFeedState) => state.totalToday
+    ordersSelector: (state) => state.orders,
+    totalSelector: (state) => state.total,
+    totalTodaySelector: (state) => state.totalToday
   },
   extraReducers: (builder) => {
     builder

@@ -44,10 +44,7 @@ export const fetchLoginUser = createAsyncThunk(
   }
 );
 
-export const fetchUser = createAsyncThunk(
-  'user/fetchUser',
-  async () => await getUserApi()
-);
+export const fetchUser = createAsyncThunk('user/fetchUser', getUserApi);
 
 export const fetchUpdateUser = createAsyncThunk(
   'user/fetchUpdateUser',
@@ -66,8 +63,8 @@ export const userSlice = createSlice({
   initialState,
   reducers: {},
   selectors: {
-    userSelector: (state: TUserState) => state.user,
-    isAuthCheckedSelector: (state: TUserState) => state.isAuthChecked
+    userSelector: (state) => state.user,
+    isAuthCheckedSelector: (state) => state.isAuthChecked
   },
   extraReducers: (builder) => {
     builder
