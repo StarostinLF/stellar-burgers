@@ -100,7 +100,8 @@
     "prepare": "husky install",
     "check": "npm run lint:fix && npm run format",
     "commit": "npm run check && cz",
-    "test": "jest"
+    "test": "jest",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
