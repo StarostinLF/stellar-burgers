@@ -5,6 +5,7 @@ import mockUserData from '../fixtures/user.json';
 import mockOrderData from '../fixtures/order.json';
 
 const localhost = 'http://localhost:4000/';
+const modals = '#modals';
 const viewportWidth = 1280;
 const viewportHeight = 720;
 
@@ -76,19 +77,19 @@ describe('Тест модальных окон', () => {
 
   it('Открытие модального окна при клике на ингредиент', () => {
     cy.get('[ingredient-test="ingredient"]').first().find('a').click();
-    cy.get('#modals');
+    cy.get(modals);
   });
 
   it('Закрытие модального окна по клику на крестик', () => {
     cy.get('[ingredient-test="ingredient"]').first().find('a').click();
-    cy.get('#modals').find('button').click();
-    cy.get('#modals').children().should('have.length', 0);
+    cy.get(modals).find('button').click();
+    cy.get(modals).children().should('have.length', 0);
   });
 
   it('Закрытие модального окна по клику на оверлей', () => {
     cy.get('[ingredient-test="ingredient"]').first().find('a').click();
     cy.get('body').click('bottom');
-    cy.get('#modals').children().should('have.length', 0);
+    cy.get(modals).children().should('have.length', 0);
   });
 });
 
@@ -128,9 +129,9 @@ describe('Тест создания заказа', () => {
 
     cy.contains('Оформить заказ').click();
 
-    cy.get('#modals').contains(54791).should('exist');
-    cy.get('#modals').find('button').click();
-    cy.get('#modals').children().should('have.length', 0);
+    cy.get(modals).contains(54791).should('exist');
+    cy.get(modals).find('button').click();
+    cy.get(modals).children().should('have.length', 0);
 
     cy.contains('Выберите булки').should('be.visible');
     cy.contains('Выберите начинку').should('be.visible');
