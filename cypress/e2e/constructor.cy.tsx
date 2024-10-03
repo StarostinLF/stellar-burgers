@@ -4,7 +4,7 @@ import mockIngredientData from '../fixtures/ingredients.json';
 import mockUserData from '../fixtures/user.json';
 import mockOrderData from '../fixtures/order.json';
 
-const localhost = 'http://localhost:4000/';
+const localhost = '/';
 const modals = '#modals';
 const viewportWidth = 1280;
 const viewportHeight = 720;
