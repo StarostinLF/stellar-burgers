@@ -2,12 +2,12 @@ import { getFeedsApi } from '@api';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { TOrdersData } from '@utils-types';
 
-type TFeedState = TOrdersData & {
+export type TFeedState = TOrdersData & {
   isLoading: boolean;
   error: string | undefined;
 };
 
-const initialState: TFeedState = {
+export const initialState: TFeedState = {
   orders: [],
   total: 0,
   totalToday: 0,

@@ -2,14 +2,14 @@ import { getOrderByNumberApi, getOrdersApi, orderBurgerApi } from '@api';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TOrder } from '@utils-types';
 
-type TOrdersState = {
+export type TOrdersState = {
   orders: TOrder[];
   order: TOrder | null;
   isLoading: boolean;
   error: string | undefined;
 };
 
-const initialState: TOrdersState = {
+export const initialState: TOrdersState = {
   orders: [],
   order: null,
   isLoading: false,
