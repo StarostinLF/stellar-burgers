@@ -11,14 +11,14 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { TUser } from '@utils-types';
 import { deleteCookie, setCookie } from '../../utils/cookie';
 
-type TUserState = {
+export type TUserState = {
   user: TUser | null;
   isAuthChecked: boolean;
   isLoading: boolean;
   error: string | undefined;
 };
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   user: null,
   isAuthChecked: false,
   isLoading: true,

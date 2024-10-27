@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODMzZjgyOGE0YjYyMDAxYzg1Nzc5YSIsImlhdCI6MTcyNzc4OTk2MSwiZXhwIjoxNzI3NzkxMTYxfQ.olVUNGwBJ_Gjy7Z4gbGrJ85-exV8mniPAYaygirG67Q",
+  "refreshToken": "fec137248d1fe9e8a64399d49959ac4b9183a187e7344ffec751f27381c7e38298046fe60f95d29c",
+  "user": {
+    "email": "avatar5919@mail.ru",
+    "name": "Леонид"
+  }
+}
